@@ -1,0 +1,70 @@
+:root{
+    --footer-background:rgb(22, 40, 61);
+    --footer-color: rgb(110, 117, 126);
+    --footer-logo-color:rgb(81, 102, 129);
+    --base-color:rgb(0, 52, 120);
+    --base-background:rgb(28, 51, 80);
+}
+
+footer{
+    --pad:[10rem 6vw 82];
+    --standard-length-primary:[100vw 100rem 92];
+    --standard-length:[var(--standard-length-primary) 100vw 82];
+    width: var(--standard-length);
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 1rem var(--pad);
+    background-color: var(--footer-background);
+    margin: 0;
+}
+
+footer *{
+    color: var(--footer-color);
+}
+
+footer main{
+    --directionFlow:[row column 40];
+    --aligns:[self-start center 40];
+    flex-direction: var(--directionFlow);
+    width: 100%;
+    justify-content: space-between;
+    align-items: var(--aligns);
+    background-color: rgba(255, 0, 0, 0);
+}
+
+footer main nav{
+    --directionFlow:[row column 50];
+    --nav-width:[42% 47.5% 68];
+    --aligns:[self-start center 40];
+    flex-direction: var(--directionFlow);
+    width: var(--nav-width);
+    justify-content: space-between;
+    align-items: var(--aligns);
+    background-color: rgba(0, 0, 255, 0);
+}
+
+footer main nav aside ul {
+    --standard-ul:[auto 90vw 40];
+    width: var(--standard-ul);
+    background-color: rgba(0, 255, 255, 0);
+    margin: 1.5rem 0;
+}
+
+footer main nav aside ul li{
+    --aligns:[justify center 40];
+    display: flex;
+    padding: 1rem 0;
+    text-align: var(--aligns);
+}
+
+#footer-logo{
+    --size:[2rem 1.5rem 60];
+    --aligns:[right center 60];
+    width: 100%;
+    font: bold var(--size) times;
+    padding: 3rem 0;
+    color: var(--footer-logo-color);
+    letter-spacing: .5rem;
+    text-align: var(--aligns);
+}

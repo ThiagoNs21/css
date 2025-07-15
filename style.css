@@ -1,0 +1,95 @@
+section{
+    --standard-length:[80rem 90vw 82];
+    width: var(--standard-length);
+    justify-content: center;
+    align-items: center;
+}
+
+body section *:nth-child(1){
+    --self-align:[self-start center 52];
+    margin: 1rem 0 .5rem 0;
+    color: rgb(65, 86, 111);
+    text-align: center;
+    padding: 0 .5rem;
+    align-self: var(--self-align);
+    font: bold 2rem times;
+    text-transform: capitalize;
+}
+
+body section *:not(* *:nth-child(1)){
+    margin: .5rem 0;
+    color: rgb(102, 102, 102);
+    font: normal calc(.85rem + 1px) arial;
+}
+
+span.space{
+    margin: 0;
+    height: 4rem;
+}
+
+body * [class*="cover-"]{
+    --cover-width-primary:[150% 400% 55];
+    --cover-width:[100% var(--cover-width-primary) 85];
+    --cover-position:[center bottom 85];
+    --cover-aspect:[2/1 2/2 45];
+    width: 100%;
+    aspect-ratio: var(--cover-aspect);
+    background-size: var(--cover-width);
+    background-position-y: var(--cover-position);
+    background-position-x: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.cover-1{
+    background-image: linear-gradient(rgba(22, 22, 49, 0.881),rgba(11, 11, 45, 0.382) ,rgba(30, 30, 150, 0.219) ,rgba(30, 30, 150, 0.163)) , url("img1.jpg");
+}
+
+.cover-2{
+    background-image: linear-gradient(rgba(22, 22, 49, 0.881),rgba(11, 11, 45, 0.382) ,rgba(30, 30, 150, 0.219) ,rgba(30, 30, 150, 0.163)) , url("img2.jpg");
+}
+
+div.full-cover{
+
+    --cover-width-primary:[150% 400% 55];
+    --cover-width:[100% var(--cover-width-primary) 85];
+    --cover-position:[center bottom 85];
+    --cover-aspect:[2/1 2/2 40];
+    width: 100%;
+    aspect-ratio: var(--cover-aspect);
+    background-size: var(--cover-width);
+    background-position-y: var(--cover-position);
+    background-position-x: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    
+    background-image: linear-gradient(rgba(22, 22, 49, 0.951),rgba(11, 11, 45, 0.382) ,rgba(30, 30, 150, 0.219) ,rgba(30, 30, 150, 0.163)) , url("img1.jpg");
+    justify-content: center;
+}
+
+div.full-cover .text-section{
+    justify-content: center;
+}
+
+div.full-cover .text-section *{
+    justify-content: center;
+}
+
+div.full-cover .text-section h1,div.full-cover .text-section p{
+    text-align: center;
+    color: white;
+}
+
+div.full-cover .text-section h1{
+    --font-length:[4rem 8vw 45];
+    font: bold var(--font-length) times;
+    color: white;
+}
+
+div.full-cover .text-section p{
+    --font-length:[1.5rem 3vw 45];
+    font: bold var(--font-length) arial;
+    color: white;
+    letter-spacing: .25rem;
+}
